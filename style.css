@@ -1,0 +1,1417 @@
+
+/* =========================================================
+   FORMA — DESIGN SYSTEM
+   Seis identidades visuais
+   HTML + CSS | Sem JavaScript
+========================================================= */
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    background: #eee;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body > input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TEMA 01 — ARGILA
+   Orgânico / Editorial / Terroso
+========================================================= */
+
+.site {
+    --bg: #eee4d8;
+    --surface: #f8f2e9;
+    --surface-2: #e3d0bd;
+    --text: #482c27;
+    --muted: #92766b;
+    --accent: #b65e45;
+    --accent-2: #d69a78;
+    --contrast: #fff9f1;
+    --border: #d8c1ae;
+    --shadow: 0 18px 50px rgba(88, 49, 36, .10);
+
+    --font: "DM Sans", sans-serif;
+    --display: "DM Serif Display", serif;
+
+    --radius: 18px;
+    --radius-small: 9px;
+    --border-width: 1px;
+    --letter-spacing: 0;
+
+    --art-one: #b65e45;
+    --art-two: #d69a78;
+    --art-three: #6e453b;
+
+    --glow: none;
+
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    letter-spacing: var(--letter-spacing);
+    min-height: 100vh;
+    overflow: hidden;
+    transition: background .4s ease, color .4s ease;
+}
+
+
+/* =========================================================
+   TEMA 02 — NOIR
+   Sofisticado / Editorial / Minimalista
+========================================================= */
+
+body:has(#t-noir:checked) .site {
+    --bg: #171717;
+    --surface: #222222;
+    --surface-2: #303030;
+    --text: #f1ede5;
+    --muted: #a59d91;
+    --accent: #c5a66d;
+    --accent-2: #e0c99c;
+    --contrast: #171717;
+    --border: #46413a;
+    --shadow: 0 20px 60px rgba(0, 0, 0, .25);
+
+    --font: "Manrope", sans-serif;
+    --display: "Bodoni Moda", serif;
+
+    --radius: 2px;
+    --radius-small: 1px;
+    --border-width: 1px;
+    --letter-spacing: .025em;
+
+    --art-one: #c5a66d;
+    --art-two: #eee2c9;
+    --art-three: #746044;
+
+    --glow: none;
+}
+
+
+/* =========================================================
+   TEMA 03 — PRISMA
+   Holográfico / Experimental / Vibrante
+========================================================= */
+
+body:has(#t-prisma:checked) .site {
+    --bg: #e9e5f3;
+    --surface: #f7f4fc;
+    --surface-2: #ddd5ee;
+    --text: #29233e;
+    --muted: #77708e;
+    --accent: #8b65d9;
+    --accent-2: #e18bc1;
+    --contrast: #ffffff;
+    --border: #cfc4e8;
+    --shadow: 0 18px 55px rgba(103, 77, 165, .15);
+
+    --font: "Outfit", sans-serif;
+    --display: "Space Grotesk", sans-serif;
+
+    --radius: 24px;
+    --radius-small: 14px;
+    --border-width: 1px;
+    --letter-spacing: -.015em;
+
+    --art-one: #8b65d9;
+    --art-two: #e18bc1;
+    --art-three: #75c9d2;
+
+    --glow: 0 0 28px rgba(177, 137, 255, .25);
+}
+
+
+/* =========================================================
+   TEMA 04 — DEVANEIO
+   Surrealista / Delicado / Fluido
+========================================================= */
+
+body:has(#t-devaneio:checked) .site {
+    --bg: #eee9f4;
+    --surface: #faf6fc;
+    --surface-2: #e2d8ed;
+    --text: #51435f;
+    --muted: #9685a4;
+    --accent: #9b7bbd;
+    --accent-2: #e5a9a9;
+    --contrast: #fffaff;
+    --border: #d8c9e4;
+    --shadow: 0 18px 50px rgba(113, 84, 139, .10);
+
+    --font: "DM Sans", sans-serif;
+    --display: "Playfair Display", serif;
+
+    --radius: 35px;
+    --radius-small: 20px;
+    --border-width: 1px;
+    --letter-spacing: .005em;
+
+    --art-one: #a58bc9;
+    --art-two: #e9b7b5;
+    --art-three: #a8c5dc;
+
+    --glow: 0 0 30px rgba(173, 142, 204, .15);
+}
+
+
+/* =========================================================
+   TEMA 05 — ÓRBITA
+   Futurista / Tecnológico / Noturno
+========================================================= */
+
+body:has(#t-orbita:checked) .site {
+    --bg: #10141c;
+    --surface: #1a202b;
+    --surface-2: #252e3d;
+    --text: #e8edf5;
+    --muted: #8996a9;
+    --accent: #83c9d8;
+    --accent-2: #b3a0ff;
+    --contrast: #10141c;
+    --border: #354353;
+    --shadow: 0 20px 60px rgba(0, 0, 0, .3);
+
+    --font: "Space Grotesk", sans-serif;
+    --display: "Space Grotesk", sans-serif;
+
+    --radius: 14px;
+    --radius-small: 8px;
+    --border-width: 1px;
+    --letter-spacing: -.025em;
+
+    --art-one: #83c9d8;
+    --art-two: #b3a0ff;
+    --art-three: #52647e;
+
+    --glow: 0 0 25px rgba(131, 201, 216, .2);
+}
+
+
+/* =========================================================
+   TEMA 06 — NOSTALGIA
+   Vintage / Artístico / Acolhedor
+========================================================= */
+
+body:has(#t-nostalgia:checked) .site {
+    --bg: #eee2c5;
+    --surface: #f8efd9;
+    --surface-2: #e3d0a7;
+    --text: #4e352b;
+    --muted: #92755e;
+    --accent: #a65e42;
+    --accent-2: #c69a4c;
+    --contrast: #fff7e7;
+    --border: #d8c19a;
+    --shadow: 0 18px 50px rgba(86, 59, 35, .12);
+
+    --font: "DM Sans", sans-serif;
+    --display: "Playfair Display", serif;
+
+    --radius: 4px;
+    --radius-small: 2px;
+    --border-width: 2px;
+    --letter-spacing: .005em;
+
+    --art-one: #a65e42;
+    --art-two: #d0a54f;
+    --art-three: #6c5141;
+
+    --glow: none;
+}
+
+
+/* =========================================================
+   ESTRUTURA GERAL
+========================================================= */
+
+.site {
+    transition:
+        background .45s ease,
+        color .45s ease;
+}
+
+.container {
+    width: min(1160px, calc(100% - 64px));
+    margin-inline: auto;
+}
+
+.header {
+    min-height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: var(--border-width) solid var(--border);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.brand-symbol {
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    background: var(--text);
+    color: var(--bg);
+    border-radius: var(--radius-small);
+    font-family: var(--display);
+    font-size: 21px;
+    transition: .4s ease;
+}
+
+.brand-dot {
+    color: var(--accent);
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.header nav a,
+.header-link {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    transition: color .25s ease;
+}
+
+.header nav a:hover,
+.header-link:hover {
+    color: var(--accent);
+}
+
+.header-link {
+    color: var(--text);
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 5px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 650px;
+    padding-top: 105px;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    column-gap: 70px;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.hero-content {
+    padding-bottom: 35px;
+}
+
+.eyebrow,
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .15em;
+}
+
+.eyebrow-line {
+    width: 27px;
+    height: 1px;
+    background: var(--accent);
+}
+
+.hero h1 {
+    max-width: 600px;
+    margin-top: 30px;
+    font-family: var(--display);
+    font-size: clamp(48px, 6vw, 78px);
+    line-height: 1.04;
+    font-weight: 500;
+    letter-spacing: -.055em;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--accent);
+}
+
+.hero-description {
+    max-width: 420px;
+    margin-top: 26px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 35px;
+    margin-top: 34px;
+    padding: 16px 21px;
+    background: var(--text);
+    color: var(--bg);
+    border-radius: var(--radius-small);
+    font-size: 12px;
+    font-weight: 700;
+    transition: .3s ease;
+}
+
+.primary-button:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.primary-button span {
+    font-size: 17px;
+}
+
+
+/* ARTE DO HERO */
+
+.hero-art {
+    min-height: 410px;
+    padding: 22px;
+    background: var(--surface);
+    border: var(--border-width) solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition: .4s ease;
+}
+
+.art-top,
+.art-bottom {
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    z-index: 2;
+}
+
+.art-composition {
+    height: 290px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.composition-circle {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background: var(--art-one);
+    position: absolute;
+    transform: translate(-48px, -15px);
+    transition: .4s ease;
+}
+
+.composition-square {
+    width: 160px;
+    height: 160px;
+    background: var(--art-two);
+    border-radius: var(--radius-small);
+    position: absolute;
+    transform: translate(65px, 45px) rotate(15deg);
+    mix-blend-mode: multiply;
+    opacity: .8;
+    transition: .4s ease;
+}
+
+.composition-line {
+    width: 230px;
+    height: 2px;
+    background: var(--text);
+    position: absolute;
+    transform: rotate(-38deg);
+    opacity: .45;
+}
+
+.composition-letter {
+    position: absolute;
+    font-family: var(--display);
+    font-size: 125px;
+    color: var(--contrast);
+    z-index: 2;
+    opacity: .9;
+}
+
+.hero-meta {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: .12em;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CONCEITO
+========================================================= */
+
+.concept {
+    padding-top: 95px;
+    padding-bottom: 110px;
+    border-top: var(--border-width) solid var(--border);
+    display: grid;
+    grid-template-columns: .7fr 1.3fr;
+    gap: 60px;
+}
+
+.concept-content h2 {
+    max-width: 720px;
+    font-family: var(--display);
+    font-size: clamp(35px, 4.5vw, 58px);
+    line-height: 1.12;
+    font-weight: 500;
+    letter-spacing: -.04em;
+}
+
+.concept-content h2 em {
+    color: var(--accent);
+    font-weight: 400;
+}
+
+.concept-content p {
+    max-width: 560px;
+    margin-top: 25px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   TEMAS
+========================================================= */
+
+.themes-section {
+    padding-top: 90px;
+    padding-bottom: 110px;
+    border-top: var(--border-width) solid var(--border);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 42px;
+}
+
+.section-heading h2,
+.preview-heading h2 {
+    margin-top: 20px;
+    font-family: var(--display);
+    font-size: clamp(35px, 4vw, 52px);
+    font-weight: 500;
+    letter-spacing: -.04em;
+}
+
+.section-heading h2 em {
+    color: var(--accent);
+    font-weight: 400;
+}
+
+.section-heading > p {
+    max-width: 250px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.theme-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.theme-card {
+    display: block;
+    cursor: pointer;
+    border: var(--border-width) solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 10px;
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+
+.theme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.theme-art {
+    height: 190px;
+    position: relative;
+    overflow: hidden;
+    border-radius: calc(var(--radius) - 5px);
+}
+
+.theme-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 4;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    color: rgba(255,255,255,.8);
+}
+
+.theme-symbol {
+    position: absolute;
+    right: 16px;
+    bottom: 5px;
+    font-family: var(--display);
+    font-size: 60px;
+    line-height: 1;
+    color: rgba(255,255,255,.65);
+    z-index: 4;
+}
+
+.theme-info {
+    padding: 19px 10px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme-info h3 {
+    font-family: var(--display);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.theme-info p {
+    margin-top: 6px;
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.theme-arrow {
+    color: var(--accent);
+    font-size: 20px;
+    transition: transform .3s ease;
+}
+
+.theme-card:hover .theme-arrow {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   ILUSTRAÇÕES DOS CARTÕES
+========================================================= */
+
+
+/* ARGILA */
+
+.argila-card .theme-art {
+    background: #a95740;
+}
+
+.mini-argila {
+    position: absolute;
+    inset: 0;
+}
+
+.argila-circle {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background: #d69a78;
+    top: 35px;
+    left: 55px;
+}
+
+.argila-arch {
+    position: absolute;
+    width: 100px;
+    height: 125px;
+    border: 13px solid #f1d7b9;
+    border-bottom: 0;
+    border-radius: 60px 60px 0 0;
+    right: 45px;
+    bottom: -15px;
+}
+
+.argila-line {
+    position: absolute;
+    width: 190px;
+    height: 1px;
+    background: #fff0dc;
+    top: 100px;
+    left: 30px;
+    transform: rotate(-35deg);
+}
+
+
+/* NOIR */
+
+.noir-card .theme-art {
+    background: #242321;
+}
+
+.noir-frame {
+    position: absolute;
+    inset: 25px 55px;
+    border: 1px solid #c5a66d;
+}
+
+.noir-circle {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border: 1px solid #c5a66d;
+    border-radius: 50%;
+    top: 40px;
+    left: 75px;
+}
+
+.noir-star {
+    position: absolute;
+    top: 70px;
+    right: 65px;
+    color: #e0c99c;
+    font-size: 38px;
+}
+
+
+/* PRISMA */
+
+.prisma-card .theme-art {
+    background: linear-gradient(130deg, #7661bd, #c18bd4 50%, #7ac8d0);
+}
+
+.mini-prisma {
+    position: absolute;
+    inset: 0;
+}
+
+.prisma-shape {
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    border-radius: 22px;
+    opacity: .8;
+    backdrop-filter: blur(3px);
+}
+
+.prisma-shape.one {
+    background: #f2a6d2;
+    top: 35px;
+    left: 45px;
+    transform: rotate(25deg);
+}
+
+.prisma-shape.two {
+    background: #8bd9e1;
+    top: 50px;
+    left: 115px;
+    transform: rotate(55deg);
+    mix-blend-mode: screen;
+}
+
+.prisma-shape.three {
+    background: #e9d4ff;
+    top: 15px;
+    left: 150px;
+    transform: rotate(15deg);
+    mix-blend-mode: screen;
+}
+
+
+/* DEVANEIO */
+
+.devaneio-card .theme-art {
+    background: linear-gradient(145deg, #a58bc9, #d9b8d9 55%, #a8c5dc);
+}
+
+.mini-devaneio {
+    position: absolute;
+    inset: 0;
+}
+
+.dream-orbit {
+    width: 190px;
+    height: 75px;
+    border: 2px solid rgba(255,255,255,.8);
+    border-radius: 50%;
+    position: absolute;
+    top: 65px;
+    left: 45px;
+    transform: rotate(-30deg);
+}
+
+.dream-ball {
+    width: 85px;
+    height: 85px;
+    background: #f3c7c0;
+    border-radius: 50%;
+    position: absolute;
+    top: 45px;
+    left: 100px;
+    box-shadow: 15px 12px 0 rgba(255,255,255,.15);
+}
+
+.dream-cloud {
+    width: 85px;
+    height: 35px;
+    background: #dce8f2;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 28px;
+    left: 45px;
+    transform: rotate(-20deg);
+}
+
+
+/* ÓRBITA */
+
+.orbita-card .theme-art {
+    background: radial-gradient(circle at center, #354d67, #141b2b 75%);
+}
+
+.mini-orbita {
+    position: absolute;
+    inset: 0;
+}
+
+.orbita-planet {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c5c4e8, #83c9d8 65%, #596b93);
+    position: absolute;
+    top: 45px;
+    left: 90px;
+    box-shadow: 0 0 30px rgba(131,201,216,.3);
+}
+
+.orbita-ring {
+    width: 180px;
+    height: 60px;
+    border: 2px solid #b3a0ff;
+    border-radius: 50%;
+    position: absolute;
+    top: 65px;
+    left: 48px;
+    transform: rotate(-25deg);
+}
+
+.orbita-star {
+    position: absolute;
+    top: 35px;
+    right: 45px;
+    color: #83c9d8;
+    font-size: 24px;
+}
+
+
+/* NOSTALGIA */
+
+.nostalgia-card .theme-art {
+    background: #a65e42;
+}
+
+.mini-nostalgia {
+    position: absolute;
+    inset: 0;
+}
+
+.mini-nostalgia > span {
+    position: absolute;
+    left: 40px;
+    top: 35px;
+    font-family: "Playfair Display", serif;
+    font-size: 105px;
+    color: #f0d89e;
+    line-height: 1;
+    transform: rotate(-8deg);
+}
+
+.nostalgia-stripes {
+    position: absolute;
+    width: 190px;
+    height: 45px;
+    bottom: 35px;
+    left: 65px;
+    background: repeating-linear-gradient(
+        0deg,
+        #d5a34d 0 5px,
+        transparent 5px 10px
+    );
+    transform: skewY(-15deg);
+}
+
+.nostalgia-circle {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #e4a3a0;
+    top: 30px;
+    right: 35px;
+}
+
+
+/* SELEÇÃO DOS TEMAS */
+
+#t-argila:checked ~ .site .argila-card,
+#t-noir:checked ~ .site .noir-card,
+#t-prisma:checked ~ .site .prisma-card,
+#t-devaneio:checked ~ .site .devaneio-card,
+#t-orbita:checked ~ .site .orbita-card,
+#t-nostalgia:checked ~ .site .nostalgia-card {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   PREVIEW
+========================================================= */
+
+.preview-section {
+    padding-top: 90px;
+    padding-bottom: 110px;
+    border-top: var(--border-width) solid var(--border);
+}
+
+.preview-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .13em;
+}
+
+.live-indicator > span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: var(--glow);
+}
+
+.preview-window {
+    background: var(--surface);
+    border: var(--border-width) solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: .4s ease;
+}
+
+.preview-topbar {
+    height: 45px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--border-width) solid var(--border);
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .1em;
+}
+
+.window-dots {
+    display: flex;
+    gap: 5px;
+}
+
+.window-dots i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: .65;
+}
+
+.preview-content {
+    padding: 30px 38px 22px;
+}
+
+.preview-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .12em;
+}
+
+.preview-logo {
+    color: var(--text);
+    font-size: 14px;
+    letter-spacing: .15em;
+}
+
+.preview-main {
+    min-height: 330px;
+    display: grid;
+    grid-template-columns: 1fr .8fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.preview-copy {
+    padding: 35px 0;
+}
+
+.preview-overline {
+    color: var(--accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .15em;
+}
+
+.preview-copy h3 {
+    max-width: 420px;
+    margin-top: 20px;
+    font-family: var(--display);
+    font-size: clamp(32px, 4vw, 49px);
+    line-height: 1.12;
+    font-weight: 500;
+    letter-spacing: -.04em;
+}
+
+.preview-copy p {
+    max-width: 340px;
+    margin-top: 17px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.preview-button {
+    display: inline-flex;
+    gap: 25px;
+    align-items: center;
+    margin-top: 24px;
+    padding: 13px 17px;
+    border: var(--border-width) solid var(--accent);
+    border-radius: var(--radius-small);
+    color: var(--text);
+    font-size: 10px;
+    font-weight: 700;
+    transition: .3s ease;
+}
+
+.preview-button:hover {
+    background: var(--accent);
+    color: var(--contrast);
+}
+
+.preview-graphic {
+    min-height: 265px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--surface-2);
+}
+
+.preview-graphic > span {
+    position: relative;
+    z-index: 3;
+    color: var(--contrast);
+    font-family: var(--display);
+    font-size: 100px;
+    opacity: .85;
+}
+
+.preview-shape {
+    position: absolute;
+    transition: .4s ease;
+}
+
+.shape-a {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: var(--art-one);
+    top: 25px;
+    left: 35px;
+}
+
+.shape-b {
+    width: 130px;
+    height: 130px;
+    border-radius: var(--radius);
+    background: var(--art-two);
+    right: 30px;
+    bottom: 25px;
+    transform: rotate(25deg);
+    opacity: .9;
+    mix-blend-mode: multiply;
+}
+
+.shape-c {
+    width: 170px;
+    height: 2px;
+    background: var(--text);
+    transform: rotate(-35deg);
+    opacity: .35;
+}
+
+.preview-footer {
+    padding-top: 18px;
+    border-top: var(--border-width) solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .12em;
+}
+
+
+/* =========================================================
+   ENCERRAMENTO
+========================================================= */
+
+.closing-section {
+    padding-top: 95px;
+    padding-bottom: 110px;
+    border-top: var(--border-width) solid var(--border);
+}
+
+.closing-section h2 {
+    max-width: 800px;
+    margin-top: 35px;
+    font-family: var(--display);
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.08;
+    font-weight: 500;
+    letter-spacing: -.05em;
+}
+
+.closing-section h2 em {
+    color: var(--accent);
+    font-weight: 400;
+}
+
+.closing-section p {
+    margin-top: 23px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 32px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--accent);
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+    transition: color .25s ease;
+}
+
+.text-link:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.footer {
+    min-height: 100px;
+    border-top: var(--border-width) solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer > span {
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .1em;
+}
+
+
+/* =========================================================
+   TRANSIÇÕES GERAIS
+========================================================= */
+
+.theme-card,
+.preview-window,
+.hero-art,
+.brand-symbol,
+.primary-button,
+.preview-button,
+.preview-graphic {
+    transition:
+        background .4s ease,
+        color .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease,
+        border-radius .4s ease,
+        transform .3s ease;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        column-gap: 35px;
+    }
+
+    .hero-art {
+        min-height: 350px;
+    }
+
+    .theme-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .concept {
+        gap: 35px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .container {
+        width: min(100% - 36px, 520px);
+    }
+
+    .header {
+        min-height: 75px;
+    }
+
+    .header nav {
+        display: none;
+    }
+
+    .header-link {
+        font-size: 10px;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 75px;
+        padding-bottom: 100px;
+        gap: 45px;
+    }
+
+    .hero h1 {
+        font-size: clamp(44px, 12vw, 65px);
+    }
+
+    .hero-art {
+        min-height: 320px;
+    }
+
+    .hero-meta {
+        bottom: 30px;
+        font-size: 7px;
+        gap: 10px;
+    }
+
+    .concept {
+        display: block;
+        padding-top: 65px;
+        padding-bottom: 75px;
+    }
+
+    .concept-content {
+        margin-top: 35px;
+    }
+
+    .concept-content h2 {
+        font-size: 39px;
+    }
+
+    .themes-section,
+    .preview-section {
+        padding-top: 65px;
+        padding-bottom: 75px;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading > p {
+        margin-top: 18px;
+    }
+
+    .theme-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .theme-art {
+        height: 205px;
+    }
+
+    .preview-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .preview-content {
+        padding: 22px 18px;
+    }
+
+    .preview-nav {
+        font-size: 7px;
+    }
+
+    .preview-main {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .preview-copy {
+        padding: 45px 0 15px;
+    }
+
+    .preview-copy h3 {
+        font-size: 38px;
+    }
+
+    .preview-graphic {
+        min-height: 230px;
+    }
+
+    .preview-footer {
+        gap: 10px;
+        font-size: 6px;
+    }
+
+    .closing-section {
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+
+    .closing-section h2 {
+        font-size: 45px;
+    }
+
+    .footer {
+        min-height: 120px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 22px;
+        padding-bottom: 22px;
+    }
+
+    .footer > span {
+        font-size: 7px;
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-meta {
+        letter-spacing: .04em;
+    }
+
+    .preview-nav > span:nth-child(2) {
+        display: none;
+    }
+
+    .closing-section h2 {
+        font-size: 39px;
+    }
+
+}
+
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+}

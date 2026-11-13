@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FORMA — Um estudo de identidade visual e design.">
+    <title>FORMA — Design System</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SELEÇÃO DOS TEMAS -->
+    <input type="radio" name="theme" id="t-argila" checked>
+    <input type="radio" name="theme" id="t-noir">
+    <input type="radio" name="theme" id="t-prisma">
+    <input type="radio" name="theme" id="t-devaneio">
+    <input type="radio" name="theme" id="t-orbita">
+    <input type="radio" name="theme" id="t-nostalgia">
+
+    <div class="site">
+
+        <header class="header container">
+            <a href="#" class="brand">
+                <span class="brand-symbol">F</span>
+                <span>FORMA<span class="brand-dot">.</span></span>
+            </a>
+
+            <nav>
+                <a href="#conceito">Conceito</a>
+                <a href="#temas">Temas</a>
+                <a href="#preview">Visualização</a>
+            </nav>
+
+            <a href="#temas" class="header-link">Explorar projeto ↗</a>
+        </header>
+
+
+        <main>
+
+            <!-- APRESENTAÇÃO -->
+            <section class="hero container" id="conceito">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        <span class="eyebrow-line"></span>
+                        DESIGN SYSTEM / 2026
+                    </div>
+
+                    <h1>
+                        Uma estrutura.
+                        <span>Seis identidades.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Um estudo visual sobre como cores, tipografia
+                        e formas transformam a percepção de uma interface.
+                    </p>
+
+                    <a href="#temas" class="primary-button">
+                        Explorar identidades <span>↗</span>
+                    </a>
+
+                </div>
+
+                <div class="hero-art">
+
+                    <div class="art-top">
+                        <span>FORMA / 001</span>
+                        <span>VISUAL STUDY</span>
+                    </div>
+
+                    <div class="art-composition">
+                        <div class="composition-circle"></div>
+                        <div class="composition-square"></div>
+                        <div class="composition-line"></div>
+                        <span class="composition-letter">F</span>
+                    </div>
+
+                    <div class="art-bottom">
+                        <span>DESIGN IN MOTION</span>
+                        <span>2026 — 01</span>
+                    </div>
+
+                </div>
+
+                <div class="hero-meta">
+                    <span>01 — DIREÇÃO CRIATIVA</span>
+                    <span>IDENTIDADE VISUAL</span>
+                    <span>SCROLL PARA EXPLORAR ↓</span>
+                </div>
+
+            </section>
+
+
+            <!-- CONCEITO -->
+            <section class="concept container">
+
+                <div class="section-label">
+                    <span>01</span>
+                    <span>O CONCEITO</span>
+                </div>
+
+                <div class="concept-content">
+
+                    <h2>
+                        A mesma estrutura pode contar
+                        <em>histórias diferentes.</em>
+                    </h2>
+
+                    <p>
+                        FORMA explora seis possibilidades visuais
+                        construídas a partir de uma única interface.
+                        Cada identidade apresenta uma combinação própria
+                        de cores, tipografia, formas e personalidade.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- TEMAS -->
+            <section class="themes-section container" id="temas">
+
+                <div class="section-heading">
+
+                    <div>
+                        <div class="section-label">
+                            <span>02</span>
+                            <span>IDENTIDADES</span>
+                        </div>
+
+                        <h2>Escolha uma <em>atmosfera.</em></h2>
+                    </div>
+
+                    <p>
+                        Selecione um dos seis temas e veja
+                        a interface se transformar.
+                    </p>
+
+                </div>
+
+
+                <div class="theme-grid">
+
+                    <label for="t-argila" class="theme-card argila-card">
+                        <div class="theme-art">
+                            <span class="theme-number">01 / 06</span>
+                            <div class="mini-argila">
+                                <div class="argila-circle"></div>
+                                <div class="argila-arch"></div>
+                                <div class="argila-line"></div>
+                            </div>
+                            <span class="theme-symbol">A</span>
+                        </div>
+                        <div class="theme-info">
+                            <div>
+                                <h3>Argila</h3>
+                                <p>Orgânico, quente e editorial</p>
+                            </div>
+                            <span class="theme-arrow">↗</span>
+                        </div>
+                    </label>
+
+
+                    <label for="t-noir" class="theme-card noir-card">
+                        <div class="theme-art">
+                            <span class="theme-number">02 / 06</span>
+                            <div class="mini-noir">
+                                <div class="noir-frame"></div>
+                                <div class="noir-circle"></div>
+                                <span class="noir-star">✦</span>
+                            </div>
+                            <span class="theme-symbol">N</span>
+                        </div>
+                        <div class="theme-info">
+                            <div>
+                                <h3>Noir</h3>
+                                <p>Elegante, sóbrio e minimalista</p>
+                            </div>
+                            <span class="theme-arrow">↗</span>
+                        </div>
+                    </label>
+
+
+                    <label for="t-prisma" class="theme-card prisma-card">
+                        <div class="theme-art">
+                            <span class="theme-number">03 / 06</span>
+                            <div class="mini-prisma">
+                                <div class="prisma-shape one"></div>
+                                <div class="prisma-shape two"></div>
+                                <div class="prisma-shape three"></div>
+                            </div>
+                            <span class="theme-symbol">P</span>
+                        </div>
+                        <div class="theme-info">
+                            <div>
+                                <h3>Prisma</h3>
+                                <p>Holográfico, vibrante e experimental</p>
+                            </div>
+                            <span class="theme-arrow">↗</span>
+                        </div>
+                    </label>
+
+
+                    <label for="t-devaneio" class="theme-card devaneio-card">
+                        <div class="theme-art">
+                            <span class="theme-number">04 / 06</span>
+                            <div class="mini-devaneio">
+                                <div class="dream-orbit"></div>
+                                <div class="dream-ball"></div>
+                                <div class="dream-cloud"></div>
+                            </div>
+                            <span class="theme-symbol">D</span>
+                        </div>
+                        <div class="theme-info">
+                            <div>
+                                <h3>Devaneio</h3>
+                                <p>Surrealista, leve e delicado</p>
+                            </div>
+                            <span class="theme-arrow">↗</span>
+                        </div>
+                    </label>
+
+
+                    <label for="t-orbita" class="theme-card orbita-card">
+                        <div class="theme-art">
+                            <span class="theme-number">05 / 06</span>
+                            <div class="mini-orbita">
+                                <div class="orbita-planet"></div>
+                                <div class="orbita-ring"></div>
+                                <span class="orbita-star">✦</span>
+                            </div>
+                            <span class="theme-symbol">O</span>
+                        </div>
+                        <div class="theme-info">
+                            <div>
+                                <h3>Órbita</h3>
+                                <p>Futurista, tecnológico e luminoso</p>
+                            </div>
+                            <span class="theme-arrow">↗</span>
+                        </div>
+                    </label>
+
+
+                    <label for="t-nostalgia" class="theme-card nostalgia-card">
+                        <div class="theme-art">
+                            <span class="theme-number">06 / 06</span>
+                            <div class="mini-nostalgia">
+                                <span>90</span>
+                                <div class="nostalgia-stripes"></div>
+                                <div class="nostalgia-circle"></div>
+                            </div>
+                            <span class="theme-symbol">N</span>
+                        </div>
+                        <div class="theme-info">
+                            <div>
+                                <h3>Nostalgia</h3>
+                                <p>Vintage, artístico e acolhedor</p>
+                            </div>
+                            <span class="theme-arrow">↗</span>
+                        </div>
+                    </label>
+
+                </div>
+
+            </section>
+
+
+            <!-- VISUALIZAÇÃO -->
+            <section class="preview-section container" id="preview">
+
+                <div class="section-label">
+                    <span>03</span>
+                    <span>VISUALIZAÇÃO</span>
+                </div>
+
+                <div class="preview-heading">
+                    <h2>Uma nova perspectiva.</h2>
+                    <span class="live-indicator">
+                        <span></span> LIVE PREVIEW
+                    </span>
+                </div>
+
+                <div class="preview-window">
+
+                    <div class="preview-topbar">
+                        <div class="window-dots">
+                            <i></i><i></i><i></i>
+                        </div>
+                        <span>FORMA / INTERFACE DEMONSTRATION</span>
+                        <span>2026</span>
+                    </div>
+
+                    <div class="preview-content">
+
+                        <div class="preview-nav">
+                            <span class="preview-logo">FORMA.</span>
+                            <span>DESIGN / CULTURE / IDEAS</span>
+                            <span>MENU +</span>
+                        </div>
+
+                        <div class="preview-main">
+
+                            <div class="preview-copy">
+                                <span class="preview-overline">A STUDY IN VISUAL IDENTITY</span>
+
+                                <h3>O design muda a forma de ver.</h3>
+
+                                <p>
+                                    Elementos simples podem criar experiências
+                                    únicas quando trabalham em harmonia.
+                                </p>
+
+                                <a href="#temas" class="preview-button">
+                                    Descubra mais <span>↗</span>
+                                </a>
+                            </div>
+
+                            <div class="preview-graphic">
+                                <div class="preview-shape shape-a"></div>
+                                <div class="preview-shape shape-b"></div>
+                                <div class="preview-shape shape-c"></div>
+                                <span>F.</span>
+                            </div>
+
+                        </div>
+
+                        <div class="preview-footer">
+                            <span>VISUAL LANGUAGE / 001</span>
+                            <span>CREATIVE DIRECTION</span>
+                            <span>EST. 2026</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FINAL -->
+            <section class="closing-section container">
+
+                <div class="section-label">
+                    <span>04</span>
+                    <span>ESSÊNCIA</span>
+                </div>
+
+                <h2>
+                    Seis maneiras de expressar
+                    <em>uma mesma ideia.</em>
+                </h2>
+
+                <p>
+                    A identidade está nos detalhes.
+                    A experiência está na combinação.
+                </p>
+
+                <a href="#temas" class="text-link">
+                    Experimentar os temas ↑
+                </a>
+
+            </section>
+
+        </main>
+
+
+        <footer class="footer container">
+            <a href="#" class="brand">
+                <span class="brand-symbol">F</span>
+                <span>FORMA<span class="brand-dot">.</span></span>
+            </a>
+
+            <span>ESTUDO DE DESIGN VISUAL — 2026</span>
+            <span>DESENVOLVIDO COM HTML E CSS</span>
+        </footer>
+
+    </div>
+
+</body>
+</html>
